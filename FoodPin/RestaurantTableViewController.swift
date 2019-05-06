@@ -47,11 +47,7 @@ class RestaurantTableViewController: UITableViewController {
         cell.locationLabel.text = restaurantLocations[indexPath.row]
         cell.typeLabel.text = restaurantTypes[indexPath.row]
         
-        if restaurantIsVisited[indexPath.row] {
-            cell.accessoryType = .checkmark
-        } else {
-            cell.accessoryType = .none
-        }
+        cell.heartImageView.isHidden = restaurantIsVisited[indexPath.row] ? false : true
         
         return cell
     }
@@ -84,14 +80,30 @@ class RestaurantTableViewController: UITableViewController {
         let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
         optionMenu.addAction(callAction)
         
+        let checkActionTitle = (restaurantIsVisited[indexPath.row]) ? "Undo Check in" : "Check in"
+        
         // Check-in action
-        let checkInAction = UIAlertAction(title: "Check in", style: .default, handler: {
+        let checkInAction = UIAlertAction(title: checkActionTitle, style: .default, handler: {
             (action:UIAlertAction!) -> Void in
             
-            let cell = tableView.cellForRow(at: indexPath)
-            cell?.accessoryType = .checkmark
-            self.restaurantIsVisited[indexPath.row] = true
+            let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
+            
+            self.restaurantIsVisited[indexPath.row] = (self.restaurantIsVisited[indexPath.row]) ? false : true
+            
+            // Solution to exercise #1
+            // ---
+            // Toggle the accessoryType and the value of restaurantIsVisited[indexPath.row]
+            // If the value of self.restaurantIsVisited[indexPath.row] is true, we set the accessory type to .none.
+            
+            // cell?.accessoryType = (self.restaurantIsVisited[indexPath.row]) ? .none : .checkmark
+            
+            // Solution to exercise #2
+            // ---
+            // Use the isHidden property to control the appearance of the heart icon
+            
+            cell.heartImageView.isHidden = self.restaurantIsVisited[indexPath.row] ? false : true
         })
+        
         optionMenu.addAction(checkInAction)
         
         // Display the menu

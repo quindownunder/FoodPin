@@ -20,6 +20,8 @@ class RestaurantTableViewCell: UITableViewCell {
         }
     }
     
+    @IBOutlet var heartImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
