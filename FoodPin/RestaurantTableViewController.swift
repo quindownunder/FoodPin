@@ -23,8 +23,6 @@ class RestaurantTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("Did load")
-        
         tableView.cellLayoutMarginsFollowReadableWidth = true
     }
 
