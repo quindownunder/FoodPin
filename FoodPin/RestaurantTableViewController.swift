@@ -113,6 +113,27 @@ class RestaurantTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: false)
     }
     
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        
+        let checkInAction = UIContextualAction(style: .normal, title: "Check-in") {
+            (action, sourceView, completionHandler) in
+            
+            let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
+            self.restaurantIsVisited[indexPath.row] = (self.restaurantIsVisited[indexPath.row]) ? false : true
+            cell.heartImageView.isHidden = self.restaurantIsVisited[indexPath.row] ? false : true
+            
+            completionHandler(true)
+        }
+        
+        let checkInIcon = restaurantIsVisited[indexPath.row] ? "undo" : "tick"
+        checkInAction.backgroundColor = UIColor(red: 38.0/255.0, green: 162.0/255.0, blue: 78.0/255.0, alpha: 1.0)
+        checkInAction.image = UIImage(named: checkInIcon)
+        
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [checkInAction])
+        return swipeConfiguration
+    }
+    
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {
