@@ -105,54 +105,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HWo-sr-z2a">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c7A-7m-BXH">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qfd-th-x7N">
-                                <rect key="frame" x="177.5" y="412" width="59" height="72.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APg-N8-cik">
-                                        <rect key="frame" x="6" y="0.0" width="47" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdN-wm-gzf">
-                                        <rect key="frame" x="0.0" y="28.5" width="59" height="18"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgx-7y-gyz">
-                                        <rect key="frame" x="13" y="54.5" width="33.5" height="18"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="SKy-h4-dEi" firstAttribute="trailing" secondItem="HWo-sr-z2a" secondAttribute="trailing" id="2Ic-Ip-rWB"/>
-                            <constraint firstItem="SKy-h4-dEi" firstAttribute="bottom" secondItem="HWo-sr-z2a" secondAttribute="bottom" id="PWd-y1-eYT"/>
-                            <constraint firstItem="Qfd-th-x7N" firstAttribute="centerX" secondItem="aca-Ap-USV" secondAttribute="centerX" id="WDp-iv-GWG"/>
-                            <constraint firstItem="HWo-sr-z2a" firstAttribute="top" secondItem="SKy-h4-dEi" secondAttribute="top" id="pn0-nA-HXH"/>
-                            <constraint firstItem="HWo-sr-z2a" firstAttribute="leading" secondItem="SKy-h4-dEi" secondAttribute="leading" id="vIt-gX-Vyn"/>
-                            <constraint firstItem="Qfd-th-x7N" firstAttribute="centerY" secondItem="aca-Ap-USV" secondAttribute="centerY" id="yac-H8-R88"/>
+                            <constraint firstItem="c7A-7m-BXH" firstAttribute="trailing" secondItem="SKy-h4-dEi" secondAttribute="trailing" id="VF3-JL-7G9"/>
+                            <constraint firstItem="c7A-7m-BXH" firstAttribute="leading" secondItem="SKy-h4-dEi" secondAttribute="leading" id="hvv-kk-Lnr"/>
+                            <constraint firstItem="c7A-7m-BXH" firstAttribute="top" secondItem="SKy-h4-dEi" secondAttribute="top" id="i0g-nB-KwZ"/>
+                            <constraint firstItem="c7A-7m-BXH" firstAttribute="bottom" secondItem="SKy-h4-dEi" secondAttribute="bottom" id="kSF-nM-Wwa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SKy-h4-dEi"/>
                     </view>
-                    <connections>
-                        <outlet property="restaurantImageView" destination="HWo-sr-z2a" id="YVa-Sa-9xa"/>
-                        <outlet property="restaurantLocationLabel" destination="bdN-wm-gzf" id="PD1-6e-cu9"/>
-                        <outlet property="restaurantNameLabel" destination="APg-N8-cik" id="QRM-uv-HAB"/>
-                        <outlet property="restaurantTypeLabel" destination="Bgx-7y-gyz" id="Shm-vA-zZf"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9I-f8-oe3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1511" y="-11"/>
+            <point key="canvasLocation" x="1547.8260869565217" y="83.705357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8pP-3v-PoC">
@@ -170,7 +140,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aD-JA-wcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-97.101449275362327" y="84.375"/>
+            <point key="canvasLocation" x="91" y="84"/>
         </scene>
     </scenes>
     <resources>
