@@ -113,21 +113,31 @@ class RestaurantTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: false)
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        if editingStyle == .delete {
-            restaurantNames.remove(at: indexPath.row)
-            restaurantIsVisited.remove(at: indexPath.row)
-            restaurantTypes.remove(at: indexPath.row)
-            restaurantImages.remove(at: indexPath.row)
-            restaurantLocations.remove(at: indexPath.row)
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {
+            (action, sourceView, completionHandler) in
+            self.restaurantNames.remove(at: indexPath.row)
+            self.restaurantIsVisited.remove(at: indexPath.row)
+            self.restaurantTypes.remove(at: indexPath.row)
+            self.restaurantImages.remove(at: indexPath.row)
+            self.restaurantLocations.remove(at: indexPath.row)
+            
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            completionHandler(true)
         }
         
-        tableView.deleteRows(at: [indexPath], with: .fade)
-        
-        print("Total item: \(restaurantNames.count)")
-        for name in restaurantNames {
-            print(name)
+        let shareAction = UIContextualAction(style: .normal, title: "Share") { (action, sourceView, completionHandler) in
+            let defualtText = "Just checking in at " + self.restaurantNames[indexPath.row]
+            let activityController = UIActivityViewController(activityItems: [defualtText], applicationActivities: nil)
+            self.present(activityController, animated: true, completion: nil)
+            completionHandler(true)
         }
+        
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, shareAction])
+        return swipeConfiguration
     }
+    
+
 }
