@@ -34,14 +34,14 @@ class RestaurantTableViewController: UITableViewController {
         Restaurant(name: "CASK Pub and Kitchen", type: "Thai", location: "London", image: "caskpubkitchen", isVisited: false)
     ]
     
+    //MARK: - View controller life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.cellLayoutMarginsFollowReadableWidth = true
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
-    // MARK: - Table view data source
+    // MARK: - UITableViewDataSource Protocol
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
