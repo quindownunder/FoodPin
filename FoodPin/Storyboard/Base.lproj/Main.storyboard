@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--FoodPin-->
         <scene sceneID="plf-c7-VNu">
@@ -108,6 +116,77 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c7A-7m-BXH">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="pzh-4F-9R6" userLabel="Header View" customClass="RestaurantDetailHeaderView" customModule="FoodPin" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U1s-E9-MRr" userLabel="Header View Image">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arP-Ug-nyJ" userLabel="Name Label">
+                                            <rect key="frame" x="14" y="271" width="91.5" height="42"/>
+                                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik Medium" pointSize="35"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Cr-Wr-6OF" userLabel="Heart Image View">
+                                            <rect key="frame" x="122" y="318.5" width="15" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="4MI-pi-1kO"/>
+                                                <constraint firstAttribute="width" constant="15" id="7rn-mP-IFH"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="803-8R-7dt" userLabel="Type Label">
+                                            <rect key="frame" x="14" y="316" width="100" height="20"/>
+                                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="3Uy-VB-gWq"/>
+                                                <constraint firstAttribute="height" constant="20" id="5C0-CH-YTs"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="U1s-E9-MRr" firstAttribute="top" secondItem="pzh-4F-9R6" secondAttribute="top" id="3VX-VF-d9y"/>
+                                        <constraint firstAttribute="bottom" secondItem="803-8R-7dt" secondAttribute="bottom" constant="14" id="72H-Fl-VT5"/>
+                                        <constraint firstItem="2Cr-Wr-6OF" firstAttribute="leading" secondItem="803-8R-7dt" secondAttribute="trailing" constant="8" id="H16-Ec-Z8e"/>
+                                        <constraint firstItem="803-8R-7dt" firstAttribute="top" secondItem="arP-Ug-nyJ" secondAttribute="bottom" constant="3" id="Nga-N0-oxB"/>
+                                        <constraint firstAttribute="trailing" secondItem="U1s-E9-MRr" secondAttribute="trailing" id="XLV-vF-rtG"/>
+                                        <constraint firstItem="U1s-E9-MRr" firstAttribute="leading" secondItem="pzh-4F-9R6" secondAttribute="leading" id="YAP-oG-ueu"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="arP-Ug-nyJ" secondAttribute="trailing" constant="50" id="aWe-YJ-igh"/>
+                                        <constraint firstItem="803-8R-7dt" firstAttribute="leading" secondItem="pzh-4F-9R6" secondAttribute="leading" constant="14" id="bQp-x6-Xbk"/>
+                                        <constraint firstAttribute="bottom" secondItem="U1s-E9-MRr" secondAttribute="bottom" id="eA6-vU-lco"/>
+                                        <constraint firstItem="arP-Ug-nyJ" firstAttribute="leading" secondItem="803-8R-7dt" secondAttribute="leading" id="yeH-bF-d2w"/>
+                                        <constraint firstItem="2Cr-Wr-6OF" firstAttribute="centerY" secondItem="803-8R-7dt" secondAttribute="centerY" id="z7a-rN-2VO"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="headerImageView" destination="U1s-E9-MRr" id="gfh-xt-36O"/>
+                                        <outlet property="heartImageView" destination="2Cr-Wr-6OF" id="yk1-Ng-5Cd"/>
+                                        <outlet property="nameLabel" destination="arP-Ug-nyJ" id="sst-sZ-cCJ"/>
+                                        <outlet property="typeLabel" destination="803-8R-7dt" id="7lM-8c-aZZ"/>
+                                    </connections>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5wu-1q-5VW">
+                                        <rect key="frame" x="0.0" y="378" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5wu-1q-5VW" id="cSW-F4-Ena">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="lLO-KA-4vU">
+                                        <rect key="frame" x="0.0" y="422" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lLO-KA-4vU" id="oFg-xA-Srx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -119,6 +198,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SKy-h4-dEi"/>
                     </view>
+                    <connections>
+                        <outlet property="headerView" destination="pzh-4F-9R6" id="YbB-C6-Zfj"/>
+                        <outlet property="tableView" destination="c7A-7m-BXH" id="GUD-yj-1Dc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9I-f8-oe3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
