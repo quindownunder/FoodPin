@@ -123,8 +123,12 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U1s-E9-MRr" userLabel="Header View Image">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
                                         </imageView>
+                                        <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Okz-4z-dDC" userLabel="Dim View">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arP-Ug-nyJ" userLabel="Name Label">
-                                            <rect key="frame" x="14" y="271" width="91.5" height="42"/>
+                                            <rect key="frame" x="14" y="271.5" width="91.5" height="41.5"/>
                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik Medium" pointSize="35"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -151,14 +155,18 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="U1s-E9-MRr" firstAttribute="top" secondItem="pzh-4F-9R6" secondAttribute="top" id="3VX-VF-d9y"/>
+                                        <constraint firstAttribute="trailing" secondItem="Okz-4z-dDC" secondAttribute="trailing" id="4eW-7C-LE8"/>
                                         <constraint firstAttribute="bottom" secondItem="803-8R-7dt" secondAttribute="bottom" constant="14" id="72H-Fl-VT5"/>
                                         <constraint firstItem="2Cr-Wr-6OF" firstAttribute="leading" secondItem="803-8R-7dt" secondAttribute="trailing" constant="8" id="H16-Ec-Z8e"/>
+                                        <constraint firstItem="Okz-4z-dDC" firstAttribute="leading" secondItem="pzh-4F-9R6" secondAttribute="leading" id="LEL-Df-hCR"/>
                                         <constraint firstItem="803-8R-7dt" firstAttribute="top" secondItem="arP-Ug-nyJ" secondAttribute="bottom" constant="3" id="Nga-N0-oxB"/>
                                         <constraint firstAttribute="trailing" secondItem="U1s-E9-MRr" secondAttribute="trailing" id="XLV-vF-rtG"/>
                                         <constraint firstItem="U1s-E9-MRr" firstAttribute="leading" secondItem="pzh-4F-9R6" secondAttribute="leading" id="YAP-oG-ueu"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="arP-Ug-nyJ" secondAttribute="trailing" constant="50" id="aWe-YJ-igh"/>
                                         <constraint firstItem="803-8R-7dt" firstAttribute="leading" secondItem="pzh-4F-9R6" secondAttribute="leading" constant="14" id="bQp-x6-Xbk"/>
                                         <constraint firstAttribute="bottom" secondItem="U1s-E9-MRr" secondAttribute="bottom" id="eA6-vU-lco"/>
+                                        <constraint firstItem="Okz-4z-dDC" firstAttribute="top" secondItem="pzh-4F-9R6" secondAttribute="top" id="tOq-9q-Aqv"/>
+                                        <constraint firstAttribute="bottom" secondItem="Okz-4z-dDC" secondAttribute="bottom" id="xBQ-6Q-FdC"/>
                                         <constraint firstItem="arP-Ug-nyJ" firstAttribute="leading" secondItem="803-8R-7dt" secondAttribute="leading" id="yeH-bF-d2w"/>
                                         <constraint firstItem="2Cr-Wr-6OF" firstAttribute="centerY" secondItem="803-8R-7dt" secondAttribute="centerY" id="z7a-rN-2VO"/>
                                     </constraints>
