@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060833932297E76A00EFFF9E /* RestaurantDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060833922297E76A00EFFF9E /* RestaurantDetailIconTextCell.swift */; };
+		060833952297E86F00EFFF9E /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060833942297E86F00EFFF9E /* RestaurantDetailTextCell.swift */; };
 		063D5D942276FDBD00E76D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063D5D932276FDBD00E76D3D /* AppDelegate.swift */; };
 		063D5D992276FDBD00E76D3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 063D5D972276FDBD00E76D3D /* Main.storyboard */; };
 		063D5D9B2276FDBE00E76D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 063D5D9A2276FDBE00E76D3D /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		060833922297E76A00EFFF9E /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailIconTextCell.swift; sourceTree = "<group>"; };
+		060833942297E86F00EFFF9E /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
 		063D5D902276FDBD00E76D3D /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		063D5D932276FDBD00E76D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		063D5D982276FDBD00E76D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 			children = (
 				063D5DA7227713D400E76D3D /* RestaurantTableViewCell.swift */,
 				069E06E72282E9D700D7C016 /* RestaurantDetailHeaderView.swift */,
+				060833922297E76A00EFFF9E /* RestaurantDetailIconTextCell.swift */,
+				060833942297E86F00EFFF9E /* RestaurantDetailTextCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,8 +243,10 @@
 			files = (
 				069E06E82282E9D700D7C016 /* RestaurantDetailHeaderView.swift in Sources */,
 				069E06CC22817FB200D7C016 /* Restaurant.swift in Sources */,
+				060833952297E86F00EFFF9E /* RestaurantDetailTextCell.swift in Sources */,
 				063D5DA62276FFB000E76D3D /* RestaurantTableViewController.swift in Sources */,
 				063D5DA8227713D400E76D3D /* RestaurantTableViewCell.swift in Sources */,
+				060833932297E76A00EFFF9E /* RestaurantDetailIconTextCell.swift in Sources */,
 				069E06CA228143CF00D7C016 /* RestaurantDetailViewController.swift in Sources */,
 				063D5D942276FDBD00E76D3D /* AppDelegate.swift in Sources */,
 			);

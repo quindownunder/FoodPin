@@ -178,21 +178,68 @@
                                     </connections>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5wu-1q-5VW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailIconTextCell" id="5wu-1q-5VW" customClass="RestaurantDetailIconTextCell" customModule="FoodPin" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="378" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5wu-1q-5VW" id="cSW-F4-Ena">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RLB-ps-9qO">
+                                                    <rect key="frame" x="3" y="0.0" width="409" height="40.5"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nCX-nu-ssr">
+                                                            <rect key="frame" x="0.0" y="10.5" width="20" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="78P-Xc-yGb"/>
+                                                                <constraint firstAttribute="width" constant="20" id="PS4-vF-fvN"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8d-Fm-Hbo">
+                                                            <rect key="frame" x="30" y="12" width="379" height="17"/>
+                                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="RLB-ps-9qO" secondAttribute="bottom" constant="3" id="5DG-EC-utC"/>
+                                                <constraint firstAttribute="trailing" secondItem="RLB-ps-9qO" secondAttribute="trailing" constant="2" id="FOr-3m-Wyd"/>
+                                                <constraint firstItem="RLB-ps-9qO" firstAttribute="top" secondItem="cSW-F4-Ena" secondAttribute="top" id="iLX-yR-HFs"/>
+                                                <constraint firstItem="RLB-ps-9qO" firstAttribute="leading" secondItem="cSW-F4-Ena" secondAttribute="leading" constant="3" id="plg-Mb-tiN"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconImageView" destination="nCX-nu-ssr" id="hPr-uZ-94P"/>
+                                            <outlet property="shortTextLabel" destination="O8d-Fm-Hbo" id="r96-Re-d8l"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="lLO-KA-4vU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailTextCell" id="lLO-KA-4vU" customClass="RestaurantDetailTextCell" customModule="FoodPin" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="422" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lLO-KA-4vU" id="oFg-xA-Srx">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0P-ab-tOo">
+                                                    <rect key="frame" x="3" y="0.0" width="407" height="40.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="V0P-ab-tOo" firstAttribute="top" secondItem="oFg-xA-Srx" secondAttribute="top" id="A9W-Wl-AlY"/>
+                                                <constraint firstAttribute="bottom" secondItem="V0P-ab-tOo" secondAttribute="bottom" constant="3" id="ZnU-NR-YCM"/>
+                                                <constraint firstAttribute="trailing" secondItem="V0P-ab-tOo" secondAttribute="trailing" constant="4" id="mpt-9k-VCx"/>
+                                                <constraint firstItem="V0P-ab-tOo" firstAttribute="leading" secondItem="oFg-xA-Srx" secondAttribute="leading" constant="3" id="pUT-uq-kwY"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="V0P-ab-tOo" id="NH8-IZ-3br"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
