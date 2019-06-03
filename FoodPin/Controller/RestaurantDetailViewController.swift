@@ -10,6 +10,35 @@ import UIKit
 
 class RestaurantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet var tableView: UITableView!
+    @IBOutlet var headerView: RestaurantDetailHeaderView!
+    
+    var restaurant = Restaurant()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.largeTitleDisplayMode = .never
+        
+        headerView.headerImageView.image = UIImage(named: restaurant.image)
+        headerView.nameLabel.text = restaurant.name
+        headerView.typeLabel.text = restaurant.type
+        headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.separatorStyle = .none
+        
+        // Customize the navigation bar
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
+        
+        tableView.contentInsetAdjustmentBehavior = .never
+    }
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -43,34 +72,6 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         }
     }
     
-
-    @IBOutlet var restaurantImageView: UIImageView!
-    @IBOutlet var restaurantNameLabel: UILabel!
-    @IBOutlet var restaurantTypeLabel: UILabel!
-    @IBOutlet var restaurantLocationLabel: UILabel!
-    
-    @IBOutlet var tableView: UITableView!
-    @IBOutlet var headerView: RestaurantDetailHeaderView!
-    
-    var restaurant = Restaurant()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationItem.largeTitleDisplayMode = .never
-
-        headerView.headerImageView.image = UIImage(named: restaurant.image)
-        headerView.nameLabel.text = restaurant.name
-        headerView.typeLabel.text = restaurant.type
-        headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        tableView.separatorStyle = .none
-    }
-    
-
     /*
     // MARK: - Navigation
 
