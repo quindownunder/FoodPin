@@ -99,7 +99,9 @@
                             <outlet property="delegate" destination="ZHf-WM-rf3" id="lTA-QV-IwV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FoodPin" id="Hv2-rO-maC"/>
+                    <navigationItem key="navigationItem" title="FoodPin" id="Hv2-rO-maC">
+                        <barButtonItem key="backBarButtonItem" title=" " id="FhS-H0-9e4"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pnn-Ku-Adk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
