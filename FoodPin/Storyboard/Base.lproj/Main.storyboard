@@ -100,7 +100,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="FoodPin" id="Hv2-rO-maC">
-                        <barButtonItem key="backBarButtonItem" title=" " id="FhS-H0-9e4"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="q4x-te-PZX"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pnn-Ku-Adk" userLabel="First Responder" sceneMemberID="firstResponder"/>

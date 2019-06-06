@@ -36,6 +36,8 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         navigationController?.navigationBar.tintColor = .white
         
         tableView.contentInsetAdjustmentBehavior = .never
+        
+        navigationController?.hidesBarsOnSwipe = false
     }
     
     
@@ -70,6 +72,12 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         default:
             fatalError("Failed to instantiate the table view cell for detail view cont roller")
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     /*
