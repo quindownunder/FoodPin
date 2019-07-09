@@ -289,7 +289,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0e-ls-jz8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="214"/>
+                                                    <rect key="frame" x="0.0" y="0.3333333333333286" width="414" height="214.33333333333337"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="214.5" id="a5e-j3-XPV"/>
                                                     </constraints>
